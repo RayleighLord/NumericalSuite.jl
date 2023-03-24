@@ -1,6 +1,4 @@
 using NumericalSuite
 using Test
 
-@testset "NumericalSuite.jl" begin
-    # Write your tests here.
-end
+@testset "Explicit Euler" begin include("explicit_euler.jl") end
