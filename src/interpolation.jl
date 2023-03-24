@@ -7,7 +7,7 @@ function interpolator(::ODEAlgorithm) end
 interpolator(::Euler) = FirstOrderInterpolator()
 
 function interpolate(t, ts, us, ::FirstOrderInterpolator)
-    for i in eachindex(ts)
+    for i in 1:(length(ts) - 1)
         if ts[i] <= t <= ts[i + 1]
             # Compute the slope and intercept of the line between the two points
             m = (us[i + 1] - us[i]) / (ts[i + 1] - ts[i])
