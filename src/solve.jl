@@ -1,5 +1,5 @@
 function solve(prob::MyODEProblem, alg::ODEAlgorithm; dt = error("dt not specified"))
-    @unpack f, u0, tspan, p = prob
+    f, u0, tspan, p = prob.f, prob.u0, prob.tspan, prob.p
 
     t0, tf = tspan
     m = length(u0)

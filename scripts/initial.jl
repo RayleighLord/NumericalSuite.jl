@@ -7,4 +7,11 @@ tspan = (0.0, 1.0)
 
 prob = MyODEProblem(f, u0, tspan)
 sol = solve(prob, Euler(); dt = 0.01)
-# sol = solve(prob, RK2(); dt = 0.1)
+
+f(u, p, t) = [u[2], -u[1]]
+
+u0 = [1.0, 0.0]
+tspan = (0.0, 10.0)
+
+prob = MyODEProblem(f, u0, tspan)
+sol = solve(prob, Euler(); dt = 0.01)

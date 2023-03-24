@@ -3,11 +3,7 @@ uuid = "d9b88bdd-19fa-4f09-ad23-7848864feb24"
 authors = ["Javier González Monge"]
 version = "0.1.0"
 
-[deps]
-UnPack = "3a884ed6-31ef-47d7-9d2a-63182c4928ed"
-
 [compat]
-UnPack = "1"
 julia = "1.8"
 
 [extras]

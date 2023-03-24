@@ -8,7 +8,11 @@ struct MyODESolution{uType, tType, P, A, IType} <: AbstractMyODESolution
     interp::IType
 end
 
-MyODESolution(u, t, prob, alg) = MyODESolution(u, t, prob, alg, interpolator(alg))
+function MyODESolution(u, t, prob, alg)
+    interp = interpolator(alg)
+    return MyODESolution{typeof(u), typeof(t), typeof(prob),
+                         typeof(alg), typeof(interp)}(u, t, prob, alg, interp)
+end
 
 function build_solution(u, t, prob, alg)
     return MyODESolution(u, t, prob, alg)
