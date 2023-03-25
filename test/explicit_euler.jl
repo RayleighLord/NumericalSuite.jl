@@ -50,6 +50,18 @@ end
     @test sol.u[2, 3]≈1.79 atol=1e-3
 end
 
+@testset "Harmonic Oscillator" begin
+    f(u, p, t) = [u[2], -u[1]]
+    u0 = [1.0, 0.0]
+    tspan = (0.0, 10.0)
+    prob = MyODEProblem(f, u0, tspan)
+    sol = solve(prob, Euler(); dt = 1e-5)
+
+    @test sol.u[1, 2]≈0.9999 atol=1e-3
+    @test sol(2π)[1]≈1.0 atol=1e-3
+    @test sol(2π)[2]≈0.0 atol=1e-3
+end
+
 @testset "Interpolator error" begin
     f(u, p, t) = u
     u0 = 1.0
