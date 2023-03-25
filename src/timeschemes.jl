@@ -8,7 +8,6 @@ method that discretizes the time derivative as a forward difference as follows:
 ```
 uₙ₊₁ = uₙ + Δt * f(uₙ, p, tₙ)
 ```
-```
 """
 struct Euler <: ODEAlgorithm end
 
