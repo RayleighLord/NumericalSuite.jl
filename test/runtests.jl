@@ -3,6 +3,8 @@ using Test
 
 @testset "Explicit Euler" begin include("explicit_euler.jl") end
 
+@testset "Print Functions" begin include("print_test.jl") end
+
 @testset "Exception checker" begin let err = nothing
     try
         f(u, p, t) = u
