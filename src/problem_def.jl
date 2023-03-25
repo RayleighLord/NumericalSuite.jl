@@ -9,7 +9,7 @@ To define an ODE problem, you need to provide the function `f`, the initial cond
 and the time span `tspan`. The ODE problem is then of the form:
 
 ```math
-u'(t) = f(u(t), p, t), \ \ u(t_0) = u_0,
+u'(t) = f(u(t), p, t), u(t_0) = u_0,
 ```
 
 where `t_0` is the initial time and `t_1` is the final time. The optional parameter `p`
