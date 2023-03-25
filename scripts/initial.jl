@@ -6,4 +6,4 @@ u0 = [1.0, 2.0]
 tspan = (0.0, 1.0)
 
 prob = MyODEProblem(f, u0, tspan)
-sol = solve(prob, Euler(); dt = 0.01)
+sol = solve(prob, Euler(); Δt = 0.01)

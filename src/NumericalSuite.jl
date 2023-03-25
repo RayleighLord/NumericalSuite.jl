@@ -8,7 +8,7 @@ include("solution.jl")
 include("printing.jl")
 include("solve.jl")
 
-export MyODEProblem
+export MyODEProblem, MyODESolution
 
 export Euler, RK2
 
