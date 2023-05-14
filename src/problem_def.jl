@@ -41,6 +41,7 @@ struct MyODEProblem{uType, tType, pType, F} <: AbstractMyODEProblem
     p::pType
 end
 
-function MyODEProblem(f, u0, tspan, p = nothing)
-    return MyODEProblem{typeof(u0), typeof(tspan), Nothing, typeof(f)}(f, u0, tspan, p)
+function MyODEProblem(f, u0, tspan)
+    return MyODEProblem{typeof(u0), typeof(tspan), Nothing, typeof(f)}(f, u0, tspan,
+                                                                       nothing)
 end
